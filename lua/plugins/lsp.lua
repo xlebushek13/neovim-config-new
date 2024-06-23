@@ -78,6 +78,15 @@ return {
 						},
 					},
 				},
+				pylsp = {
+					plugins = {
+						black = { enabled = true },
+						mypy = { enabled = true },
+						isort = { enabled = true, profile = "black" },
+						autopep8 = { enabled = false },
+						yapf = { enabled = false },
+					},
+				},
 				lua_ls = {
 					-- enabled = false,
 					single_file_support = true,
