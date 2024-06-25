@@ -1,11 +1,14 @@
 return {
 	{
-		"craftzdog/solarized-osaka.nvim",
-		lazy = true,
-		priority = 1000,
+		"marko-cerovac/material.nvim",
+
 		opts = function()
 			return {
-				transparent = true,
+				disable = {
+					-- ... other settings
+					background = true,
+				},
+        lualine_style = 'stealth'
 			}
 		end,
 	},
