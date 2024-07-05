@@ -7,7 +7,8 @@ vim.opt.number = true
 vim.wo.relativenumber = false
 
 -- vim.g.material_style = "palenight"
-vim.g.material_style = "deep ocean"
+-- vim.g.material_style = "deep ocean"
+-- vim.cmd.colorscheme("catppuccin")
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true

@@ -1,14 +1,16 @@
 return {
 	{
-		"marko-cerovac/material.nvim",
-
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
 		opts = function()
 			return {
-				disable = {
-					-- ... other settings
-					background = true,
+				transparent_background = true,
+				notify = true,
+				mini = {
+					enabled = true,
+					indentscope_color = "",
 				},
-        lualine_style = 'stealth'
 			}
 		end,
 	},
