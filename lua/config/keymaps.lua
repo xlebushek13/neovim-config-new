@@ -50,6 +50,9 @@ keymap.set("n", "<S-tab>", ":bprev<Return>", opts)
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
+
+keymap.set("n", "spp", ":!python3 %<CR>", opts)
+
 -- Move window
 keymap.set("n", "sh", "<C-w>h")
 keymap.set("n", "sk", "<C-w>k")
