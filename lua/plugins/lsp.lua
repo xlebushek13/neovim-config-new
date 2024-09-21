@@ -12,6 +12,7 @@ return {
 				"tailwindcss-language-server",
 				"typescript-language-server",
 				"css-lsp",
+				"vue-language-server",
 			})
 		end,
 	},
@@ -34,6 +35,18 @@ return {
 			inlay_hints = { enabled = false },
 			---@type lspconfig.options
 			servers = {
+				volar = {
+					filetypes = {
+						"typescript",
+						"vue",
+					},
+					init_options = {
+						vue = {
+							hybridMode = false,
+						},
+					},
+					root_dir = require("lspconfig.util").root_pattern("src/App.vue"),
+				},
 				cssls = {},
 				tailwindcss = {
 					root_dir = function(...)
@@ -41,6 +54,16 @@ return {
 					end,
 				},
 				tsserver = {
+					init_options = {
+						plugins = {
+							{
+								name = "@vue/typescript-plugin",
+								location = vue_language_server_path,
+								languages = { "vue" },
+							},
+						},
+					},
+					filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 					root_dir = function(...)
 						return require("lspconfig.util").root_pattern(".git")(...)
 					end,
