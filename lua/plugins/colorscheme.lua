@@ -1,25 +1,25 @@
 return {
-	-- {
-	-- 	"catppuccin/nvim",
-	-- 	name = "catppuccin",
-	-- 	priority = 1000,
-	-- 	opts = function()
-	-- 		return {
-	-- 			transparent_background = true,
-	-- 			notify = true,
-	-- 			mini = {
-	-- 				enabled = true,
-	-- 				indentscope_color = "",
-	-- 			},
-	-- 		}
-	-- 	end,
-	-- }
 	{
-		"craftzdog/solarized-osaka.nvim",
-		lazy = false,
+		"catppuccin/nvim",
+		name = "catppuccin",
 		priority = 1000,
-		opts = {
-	     terminal_colors = false,
-	   },
-	},
+		opts = function()
+			return {
+				transparent_background = true,
+				notify = true,
+				mini = {
+					enabled = true,
+					indentscope_color = "",
+				},
+			}
+		end,
+	}
+	-- {
+	-- 	"craftzdog/solarized-osaka.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	opts = {
+	--      terminal_colors = false,
+	--    },
+	-- },
 }
