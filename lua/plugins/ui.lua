@@ -72,13 +72,6 @@ return {
 	},
 
 	{
-		"rcarriga/nvim-notify",
-		opts = {
-			timeout = 5000,
-		},
-	},
-
-	{
 		"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 		build = "cd app && yarn install",
@@ -86,34 +79,6 @@ return {
 			vim.g.mkdp_filetypes = { "markdown" }
 		end,
 		ft = { "markdown" },
-	},
-	-- animations
-	{
-		"nvim-mini/mini.animate",
-		event = "VeryLazy",
-		opts = function(_, opts)
-			opts.scroll = {
-				enable = false,
-			}
-		end,
-	},
-
-	-- buffer line
-	{
-		"akinsho/bufferline.nvim",
-		event = "VeryLazy",
-		keys = {
-			{ "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
-			{ "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
-		},
-		opts = {
-			options = {
-				mode = "tabs",
-				-- separator_style = "slant",
-				show_buffer_close_icons = false,
-				show_close_icon = false,
-			},
-		},
 	},
 
 	-- filename
@@ -145,19 +110,6 @@ return {
 				end,
 			})
 		end,
-	},
-
-	{
-		"folke/zen-mode.nvim",
-		cmd = "ZenMode",
-		opts = {
-			plugins = {
-				gitsigns = true,
-				tmux = true,
-				kitty = { enabled = false, font = "+2" },
-			},
-		},
-		keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
 	},
 
 	{

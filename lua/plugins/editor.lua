@@ -26,16 +26,6 @@ return {
 					exec = "mdcat",
 					exec_path = "",
 					args = { "--local" },
-
-					-- glow
-					-- exec = "glow",
-					-- exec_path = "",
-					-- args = { "-s", "dark" },
-
-					-- terminal markdown viewer
-					-- exec = "mdv",
-					-- exec_path = "",
-					-- args = { "-c", 80 },
 				},
 				-- Markdown preview term
 				term = {
@@ -65,42 +55,7 @@ return {
 	{
 		"nvim-mini/mini.hipatterns",
 		event = "BufReadPre",
-		-- opts = {
-		-- 	highlighters = {
-		-- 		hsl_color = {
-		-- 			pattern = "hsl%(%d+,? %d+%%?,? %d+%%?%)",
-		-- 			group = function(_, match)
-		-- 				local utils = require("solarized-osaka.hsl")
-		-- 				--- @type string, string, string
-		-- 				local nh, ns, nl = match:match("hsl%((%d+),? (%d+)%%?,? (%d+)%%?%)")
-		-- 				--- @type number?, number?, number?
-		-- 				local h, s, l = tonumber(nh), tonumber(ns), tonumber(nl)
-		-- 				--- @type string
-		-- 				local hex_color = utils.hslToHex(h, s, l)
-		-- 				return MiniHipatterns.compute_hex_color_group(hex_color, "bg")
-		-- 			end,
-		-- 		},
-		-- 	},
-		-- },
 	},
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		config = function()
-			require("neo-tree").setup({
-				commands = {},
-				window = {
-					mapping_options = {
-						noremap = true,
-						nowait = true,
-					},
-					mappings = {
-						["s"] = "",
-					},
-				},
-			})
-		end,
-	},
-
 	{
 		"dinhhuy258/git.nvim",
 		event = "BufReadPre",
@@ -276,4 +231,5 @@ return {
 			require("telescope").load_extension("file_browser")
 		end,
 	},
+	{ "nvim-neo-tree/neo-tree.nvim", enabled = false },
 }
