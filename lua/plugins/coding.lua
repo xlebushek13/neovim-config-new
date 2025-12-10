@@ -23,6 +23,15 @@ return {
 		end,
 	},
 
+	{ "akinsho/git-conflict.nvim", version = "*", config = true },
+
+	-- Incremental rename
+	{
+		"smjonas/inc-rename.nvim",
+		cmd = "IncRename",
+		config = true,
+	},
+
 	-- Refactoring tool
 	{
 		"ThePrimeagen/refactoring.nvim",
